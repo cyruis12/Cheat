@@ -1,0 +1,129 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "🔫AXIS MAIN CHEAT🔫",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Axis Main Cheat",
+   LoadingSubtitle = "This Script Created By AXIS",
+   ShowText = "Rayfield", -- for mobile users to unhide rayfield, change if you'd like
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Cyruis Main Cheat"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "Buy the key System", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Key_ACD"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("Home to Kupal kaba", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+
+Rayfield:Notify({
+   Title = "Nakuha kona ip mo tanga",
+   Content = "HAHAHAHAHAHAHA",
+   Duration = 6.5,
+   Image = nil,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Wicked Script",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/GY1wfJRZ"))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Infinite yield",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/DarkNetworks/Infinite-Yield/main/latest.lua'))()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Lagger Caution[Client Side]",
+   Callback = function()
+   -- ⚠ GUI Lag Dropper (LocalScript) - Use with caution!
+-- ✅ Works with Delta, Solara, Fluxus
+
+-- SETTINGS
+local decalId = "rbxassetid://1234567890" -- Replace with your decal ID
+local lagAmount = 200 -- Parts per spam
+local delay = 3 -- Seconds between spam
+
+-- GUI Creation
+local ScreenGui = Instance.new("ScreenGui", game.CoreGui)
+local Button = Instance.new("TextButton", ScreenGui)
+
+ScreenGui.Name = "LagDropperGUI"
+Button.Size = UDim2.new(0, 150, 0, 50)
+Button.Position = UDim2.new(0.5, -75, 0.8, 0)
+Button.Text = "Start Lag Dropper"
+Button.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
+Button.TextColor3 = Color3.new(1, 1, 1)
+Button.Font = Enum.Font.SourceSansBold
+Button.TextSize = 20
+Button.BackgroundTransparency = 0.2
+Button.BorderSizePixel = 3
+
+-- Variables
+local running = false
+
+-- Lag Function
+local function dropLagParts()
+    for i = 1, lagAmount do
+        local p = Instance.new("Part", workspace)
+        p.Size, p.Anchored, p.CanCollide, p.Material = Vector3.new(6, 6, 1), false, true, Enum.Material.Neon
+        p.Position = Vector3.new(math.random(-500, 500), math.random(150, 300), math.random(-500, 500))
+        for _, face in ipairs(Enum.NormalId:GetEnumItems()) do
+            local d = Instance.new("Decal", p)
+            d.Texture, d.Face = decalId, face
+        end
+    end
+end
+
+-- Toggle Button
+Button.MouseButton1Click:Connect(function()
+    running = not running
+    Button.Text = running and "Stop Lag Dropper" or "Start Lag Dropper"
+    Button.BackgroundColor3 = running and Color3.fromRGB(50, 200, 50) or Color3.fromRGB(255, 50, 50)
+
+    if running then
+        task.spawn(function()
+            while running do
+                dropLagParts()
+                wait(delay)
+            end
+        end)
+    end
+end)
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "Sound Exploit",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Ac6-Music-Vulnerability-25536"))()
+   end,
+})
